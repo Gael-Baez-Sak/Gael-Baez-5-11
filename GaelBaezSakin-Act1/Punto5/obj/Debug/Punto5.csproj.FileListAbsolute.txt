@@ -1,0 +1,2 @@
+C:\Users\alumno\Desktop\GaelBaezSakin\POO\GaelBaezSakin-Act1\Punto5\obj\Debug\Punto5.csproj.AssemblyReference.cache
+C:\Users\alumno\Desktop\GaelBaezSakin\POO\GaelBaezSakin-Act1\Punto5\obj\Debug\Punto5.csproj.CoreCompileInputs.cache
