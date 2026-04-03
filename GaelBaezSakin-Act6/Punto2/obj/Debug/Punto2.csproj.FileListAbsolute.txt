@@ -1,0 +1,7 @@
+C:\Users\gaelb\OneDrive\Desktop\POO\GaelBaezSakin-Act6\Punto2\bin\Debug\Punto2.exe.config
+C:\Users\gaelb\OneDrive\Desktop\POO\GaelBaezSakin-Act6\Punto2\bin\Debug\Punto2.exe
+C:\Users\gaelb\OneDrive\Desktop\POO\GaelBaezSakin-Act6\Punto2\bin\Debug\Punto2.pdb
+C:\Users\gaelb\OneDrive\Desktop\POO\GaelBaezSakin-Act6\Punto2\obj\Debug\Punto2.csproj.AssemblyReference.cache
+C:\Users\gaelb\OneDrive\Desktop\POO\GaelBaezSakin-Act6\Punto2\obj\Debug\Punto2.csproj.CoreCompileInputs.cache
+C:\Users\gaelb\OneDrive\Desktop\POO\GaelBaezSakin-Act6\Punto2\obj\Debug\Punto2.exe
+C:\Users\gaelb\OneDrive\Desktop\POO\GaelBaezSakin-Act6\Punto2\obj\Debug\Punto2.pdb
