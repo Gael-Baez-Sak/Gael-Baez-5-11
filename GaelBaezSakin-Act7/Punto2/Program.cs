@@ -48,6 +48,7 @@ namespace Punto2
         public void mostrarResultados()
         {
             Console.Write("El resultado de la suma es: ");
+            Console.WriteLine(" ");
             for (int i = 0; i < 4; i++)
             {
 
