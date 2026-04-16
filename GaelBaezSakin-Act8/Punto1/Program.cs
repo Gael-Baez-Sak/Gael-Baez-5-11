@@ -14,30 +14,48 @@ namespace Punto1
 
         public void cargarElementos()
         {
+
             Console.Write("Ingresa cuantos elementos tiene el vector: ");
             int n = int.Parse(Console.ReadLine());
             vector = new int[n];
+            int menorActual = int.MaxValue;
             for (int i = 0; i < n; i++)
             {
-                Console.Write($"Ingresa el elemento {i + 1}: ");
+                Console.Write("Ingresa un valor: ");
                 vector[i] = int.Parse(Console.ReadLine());
+
+                if (vector[i] < menorActual)
+                {
+                    menorActual = vector[i];
+                }
+                else if (vector[i] == menorActual)
+                {
+                    for (int j = 0; j < i; j++)
+                    {
+                        if (vector[j] == vector[i])
+                        {
+                            Console.WriteLine("El valor menor se repite");
+                            break;
+                        }
+                    }
+                }
             }
         }
-        public int ObtenerMenor()
+        
+        public void obtenerMenor()
         {
-            
-        }
-        public bool SeRepite()
-        {
-           
-        }
-        public void MostrarResultados()
-        {
-            
+            int menor = vector.Min();
+
+            Console.WriteLine("Valor mínimo: " + menor);
+            Console.WriteLine("  ");
         }
         static void Main(string[] args)
         {
             Programa p = new Programa();
+            p.cargarElementos();
+            p.obtenerMenor();
+
+            Console.ReadKey();
         }
     }
 }
