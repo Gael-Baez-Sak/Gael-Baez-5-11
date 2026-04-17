@@ -56,10 +56,6 @@ namespace Punto1
                 Console.WriteLine("el Eje X.");
             }
         }
-    }
-
-    class Program
-    {
         static void Main(string[] args)
         {
             Punto punto1 = new Punto();
@@ -68,5 +64,6 @@ namespace Punto1
 
             Console.ReadKey();
         }
+
     }
 }

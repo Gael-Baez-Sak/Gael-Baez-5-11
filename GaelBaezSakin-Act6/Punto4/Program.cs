@@ -54,16 +54,13 @@ namespace Punto4
                 Console.WriteLine("Error: No se puede dividir entre cero.");
             }
         }
-    }
 
-    class Program
-    {
         static void Main(string[] args)
         {
             Operaciones op = new Operaciones();
             op.CargarValores();
 
-            Console.WriteLine("\n--- Resultados ---");
+            Console.WriteLine("Resultados");
             op.Sumar();
             op.Restar();
             op.Multiplicar();

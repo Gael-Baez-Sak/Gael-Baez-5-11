@@ -28,17 +28,14 @@ namespace Punto2
             double superficie = lado * lado;
             Console.WriteLine($"La superficie del cuadrado es: {superficie}");
         }
-    }
 
-    class Program
-    {
         static void Main(string[] args)
         {
-            Cuadrado miCuadrado = new Cuadrado();
+            Cuadrado c = new Cuadrado();
 
-            miCuadrado.CargarLado();
-            miCuadrado.ImprimirPerimetro();
-            miCuadrado.ImprimirSuperficie();
+            c.CargarLado();
+            c.ImprimirPerimetro();
+            c.ImprimirSuperficie();
 
             Console.ReadKey();
         }
