@@ -42,17 +42,17 @@ namespace Punto1
         }
         public void valoresMayor50()
         {
-            int sumam50;
-            sumam50 = 0;
+            int mayores50;
+            mayores50 = 0;
 
             foreach (int valor in vector)
             {
                 if (valor >= 50)
                 {
-                    sumam50 += valor;
+                    mayores50 ++;
                 }
             }
-            Console.WriteLine("El valor acumulado de los valoes mayores a 50 es: " + sumam50);
+            Console.WriteLine("El valor acumulado de los valoes mayores a 50 es: " + mayores50);
         }
         public void suma()
         {

@@ -56,7 +56,7 @@ namespace Punto3
             mayora500 = 0;
             for(int i = 0;i < 6; i++)
             {
-                if (Puntuacion[i] >= 500)
+                if (Puntuacion[i] > 500)
                 {
                     mayora500++;
                 }
