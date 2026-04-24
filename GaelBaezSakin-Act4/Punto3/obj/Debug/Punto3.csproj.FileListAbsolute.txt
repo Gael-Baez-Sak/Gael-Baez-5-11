@@ -1,0 +1,7 @@
+C:\Users\alumno\Desktop\GaelBaezSakin\POO\GaelBaezSakin-Act4\Punto3\bin\Debug\Punto3.exe.config
+C:\Users\alumno\Desktop\GaelBaezSakin\POO\GaelBaezSakin-Act4\Punto3\bin\Debug\Punto3.exe
+C:\Users\alumno\Desktop\GaelBaezSakin\POO\GaelBaezSakin-Act4\Punto3\bin\Debug\Punto3.pdb
+C:\Users\alumno\Desktop\GaelBaezSakin\POO\GaelBaezSakin-Act4\Punto3\obj\Debug\Punto3.csproj.AssemblyReference.cache
+C:\Users\alumno\Desktop\GaelBaezSakin\POO\GaelBaezSakin-Act4\Punto3\obj\Debug\Punto3.csproj.CoreCompileInputs.cache
+C:\Users\alumno\Desktop\GaelBaezSakin\POO\GaelBaezSakin-Act4\Punto3\obj\Debug\Punto3.exe
+C:\Users\alumno\Desktop\GaelBaezSakin\POO\GaelBaezSakin-Act4\Punto3\obj\Debug\Punto3.pdb
