@@ -23,6 +23,7 @@ namespace Punto2
                 maximo++;
 
             }
+            Console.ReadKey();
         }
     }
 }
