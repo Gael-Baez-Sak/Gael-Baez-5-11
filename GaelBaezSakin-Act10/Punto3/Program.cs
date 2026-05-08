@@ -46,6 +46,8 @@ namespace Punto3
             Program p = new Program();
             p.Cargar();
             p.imprimirVertices();
+
+            Console.ReadKey();
         }
     }
 }

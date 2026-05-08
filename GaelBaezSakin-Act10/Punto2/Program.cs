@@ -59,6 +59,8 @@ namespace Punto2
             p.Cargar();
             p.intercambiarColumn();
             p.imprimir();
+                
+            Console.ReadKey();
         }
     }
 }

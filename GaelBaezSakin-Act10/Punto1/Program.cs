@@ -46,6 +46,8 @@ namespace Punto1
             Program p = new Program();
             p.Cargar();
             p.imprimirColumnas();
+
+            Console.ReadKey();
         }
     }
 }
