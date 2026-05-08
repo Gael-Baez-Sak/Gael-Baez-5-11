@@ -19,9 +19,9 @@ namespace Punto1
         public void Cargar()
         {
             mat = new int[2, 5];
-            for(int f = 0; f < 2; f++)
+            for(int c = 0; c < 5; c++)
             {
-                for(int c = 0; c < 5; c++)
+                for(int f = 0; f < 2; f++)
                 {
                     Console.WriteLine("Ingrese componente: ");
                     string linea;
@@ -32,11 +32,11 @@ namespace Punto1
         }
         public void imprimirColumnas()
         {
-            for (int c = 0; c < 5; c++)
+            for (int f = 0; f < 2; f++)
             {
-                for (int f = 0; f < 2; f++)
+                for (int c = 0; c < 5; c++)
                 {
-                    Console.WriteLine(mat[f, c] + " ");
+                    Console.Write(mat[f, c] + " ");
                 }
                 Console.WriteLine();
             }

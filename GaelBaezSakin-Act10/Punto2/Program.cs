@@ -35,11 +35,11 @@ namespace Punto2
         }
         public void intercambiarColumn()
         {
-            for (int f = 0; f < mat.GetLength(1); f++)
+            for (int f = 0; f < mat.GetLength(0); f++)
             {
-                int aux = mat[f, 0];
-                mat[f, 0] = mat[f, 1];
-                mat[f, 1] = aux;
+                int aux = mat[0, f];
+                mat[0, f] = mat[1, f];
+                mat[1, f] = aux;
             }
         }
         public void imprimir()
