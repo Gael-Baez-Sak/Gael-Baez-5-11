@@ -6,20 +6,20 @@ using System.Threading.Tasks;
 
 namespace Punto1
 {
-//Confeccionar una clase que represente un empleado. Definir como atributos su
-//nombre y su sueldo. En el constructor cargar los atributos y luego en otro
-//método imprimir sus datos y por último uno que imprima un mensaje si debe
-//pagar impuestos(si el sueldo supera a 3000)
+    //Confeccionar una clase que represente un empleado. Definir como atributos su
+    //nombre y su sueldo. En el constructor cargar los atributos y luego en otro
+    //método imprimir sus datos y por último uno que imprima un mensaje si debe
+    //pagar impuestos(si el sueldo supera a 3000)
     class Empleado
     {
         private string nombre;
         private int sueldo;
-        public Empleado() 
+        public Empleado()
         {
-            Console.Write("Ingrese el nombre del empleado: ");
+            Console.Write("Ingrese el nombre del empleado/a: ");
             nombre = Console.ReadLine();
 
-            Console.Write("Ingrese el sueldo del empleado: ");
+            Console.Write("Ingrese el sueldo del empleado/a: ");
             string linea = Console.ReadLine();
             sueldo = int.Parse(linea);
         }
@@ -39,7 +39,7 @@ namespace Punto1
                 Console.WriteLine("El empleado no debe pagar impuestos.");
             }
         }
-        public 
+        public
         static void Main(string[] args)
         {
             Empleado e = new Empleado();
