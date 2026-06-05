@@ -54,6 +54,8 @@ using System.Threading.Tasks;
                 o.Multiplicar();
                 o.Dividir();
                 o.ImprimirResultados();
+
+            Console.ReadKey();
             }
         }
     }

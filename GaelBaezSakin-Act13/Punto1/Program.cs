@@ -45,6 +45,8 @@ namespace Punto1
             Empleado e = new Empleado();
             e.ImprimirDatos();
             e.PagarImpuestos();
+
+            Console.ReadKey();
         }
     }
 }
