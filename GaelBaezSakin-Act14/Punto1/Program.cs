@@ -53,7 +53,7 @@ namespace Punto1
         {
             return Tarifa;
         }
-    }
+   }
      class CabinaPeaje
      {
         private int id_Cabina = 6967;
@@ -76,12 +76,33 @@ namespace Punto1
         {
             for (int i = 0; i < 3; i++)
             {
-                Console.Write($"\nVechiculo: {vehiculos[i].devolverTipo()}" + $"\nPatente: {vehiculos[i].devolverPatente()}" + $"\nTarifa pagada: {vehiculos[i].devolverTarifa()}\n");
+                Console.Write($"\nVechiculo: {vehiculos[i].devolverTipo()}" + $"\nPatente: {vehiculos[i].devolverPatente()}" + $"\nTarifa pagada: ${vehiculos[i].devolverTarifa()}\n");
             }
+        }
+        public void tarifaMasAlta()
+        {
+            Vehiculo TarifaMayor = vehiculos[0];
+            string patenteTarifaMax = "";
+
+            for (int i = 0; i < 3; i++)
+            {
+                if (vehiculos[i].devolverTarifa() > TarifaMayor.devolverTarifa())
+                {
+                    TarifaMayor = vehiculos[i];
+                    patenteTarifaMax = vehiculos[i].devolverPatente();
+                }
+            }
+            Console.Write($"\nEl vehiculo que pago la tarifa mas alta fue la patente: {patenteTarifaMax}" + ", pagó: $" + TarifaMayor.devolverTarifa());
         }
         public void calcularTotalRecaudado()
         {
+                float suma = 0;
 
+                for (int j = 0; j < 3; j++)
+                {
+                    suma += vehiculos[j].devolverTarifa();
+                }
+                Console.WriteLine($"\nEl total recaudado es: $" + suma);
         }
 
         static void Main(string[] args)
@@ -89,6 +110,7 @@ namespace Punto1
             CabinaPeaje cp = new CabinaPeaje();
             cp.imprimirDatos();
             cp.calcularTotalRecaudado();
+            cp.tarifaMasAlta();
 
             Console.ReadKey();
         }
