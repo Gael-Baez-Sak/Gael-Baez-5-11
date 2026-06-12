@@ -63,7 +63,7 @@ namespace Punto1
         {
             vehiculos = new Vehiculo[3];
 
-            Console.Write("--- HISTORIAL CABINA " + id_Cabina + " ---");
+            Console.WriteLine("--- HISTORIAL CABINA " + id_Cabina + " ---");
 
             for (int i = 0; i < 3; i++)
             {
@@ -92,7 +92,7 @@ namespace Punto1
                     patenteTarifaMax = vehiculos[i].devolverPatente();
                 }
             }
-            Console.Write($"\nEl vehiculo que pago la tarifa mas alta fue la patente: {patenteTarifaMax}" + ", pagó: $" + TarifaMayor.devolverTarifa());
+            Console.WriteLine($"\nEl vehiculo que pago la tarifa mas alta fue la patente: {patenteTarifaMax}" + ", pagó: $" + TarifaMayor.devolverTarifa());
         }
         public void calcularTotalRecaudado()
         {

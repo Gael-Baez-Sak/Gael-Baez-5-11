@@ -66,7 +66,7 @@ namespace Punto2
         {
             for (int i = 0; i < 4; i++)
             {
-                Console.Write($"\nPasajero: {pasajeros[i].devolverNombre()}" + $"\nDNI: {pasajeros[i].devolverDNI()}" + $"\nPeso del equipaje: {pasajeros[i].devolverKilos()}\n");
+                Console.WriteLine($"\nPasajero: {pasajeros[i].devolverNombre()}" + $"\nDNI: {pasajeros[i].devolverDNI()}" + $"\nPeso del equipaje: {pasajeros[i].devolverKilos()}\n");
             }
         }
         public void pesoTotal()
@@ -85,7 +85,7 @@ namespace Punto2
             {
                 if (pasajeros[i].devolverKilos() > 23)
                 {
-                    Console.Write($"\nEl pasajero/a {pasajeros[i].devolverNombre()} excede el limite de peso (23kg), tiene {pasajeros[i].devolverKilos()}");
+                    Console.WriteLine($"\nEl pasajero/a {pasajeros[i].devolverNombre()} excede el limite de peso (23kg), tiene {pasajeros[i].devolverKilos()}");
                 }
             }
         }
@@ -95,6 +95,8 @@ namespace Punto2
             v.imprimirDatos();
             v.pesoTotal();
             v.excedeLimite();
+
+            Console.ReadKey();
         }
     }
     
