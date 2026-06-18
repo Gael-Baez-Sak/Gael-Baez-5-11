@@ -80,31 +80,55 @@ namespace Punto1
         {
             for (int i = 0; i < 3; i++)
             {
-                Console.Write("\npaciente " + (i + 1) + ": ");
+
+                Console.Write("\npaciente " + (i + 1) + ": \n");
                 for (int f = 0; f < 3; f++)
                 {
+                    Console.Write("Dia: " );
                     for (int c = 0; c < 4; c++)
                     {
-                        Console.Write("\n[" + pacientes[i].devolverRitmo(f, c) + "] ");
+                        Console.Write("[" + pacientes[i].devolverRitmo(f, c) + "] ");
                     }
+                    Console.WriteLine();
                 }
-                //for (int i = 0; i < 3; i++)
-                //{
-                //    Console.WriteLine($"\nPaciente: {pacientes[i].devolverNombre()}");
-                //    for (int j = 0; j < 4   ; j++)
-                //    {
-                //        Console.WriteLine($"\nPulsaciones: {pacientes[i].devolverRitmo(i, j)}\n");
-                //    }
-                //}
             }
         }
         public void promedioPulsaciones()
         {
+            float suma = 0;
 
+            for (int i = 0; i < 3; i++)
+            {
+                for (int f = 0; f < 3; f++)
+                {
+                    for (int c = 0; c < 4; c++)
+                    {
+                        suma += pacientes[i].devolverRitmo(f, c);
+                    }
+
+                }
+                float promedio = suma / 12;
+                Console.WriteLine($"\nLas pulsaciones promedio del paciente {pacientes[i].devolverNombre()}  son: " + promedio);
+                suma = 0;
+                promedio = 0;
+            }
         }
         public void taquicardia()
         {
+            for (int i = 0; i < 3; i++)
+            {
+                for (int f = 0; f < 3; f++)
+                {
+                    for (int c = 0; c < 4; c++)
+                    {
+                        if (pacientes[i].devolverRitmo(f,c) > 120)
+                        {
+                            Console.Write($"\nEl paciente {pacientes[i].devolverNombre()} tuvo un ataque de taquicardia ({pacientes[i].devolverRitmo(f,c)})");
+                        }
+                    }
 
+                }
+            }
         }
         static void Main(string[] args)
         {
