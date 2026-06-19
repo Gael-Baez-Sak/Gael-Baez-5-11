@@ -81,10 +81,10 @@ namespace Punto1
             for (int i = 0; i < 3; i++)
             {
 
-                Console.Write("\npaciente " + (i + 1) + ": \n");
+                Console.Write($"\npaciente {pacientes[i].devolverNombre()}: \n");
                 for (int f = 0; f < 3; f++)
                 {
-                    Console.Write("Dia: " );
+                    Console.Write("Dia: " + (f + 1));
                     for (int c = 0; c < 4; c++)
                     {
                         Console.Write("[" + pacientes[i].devolverRitmo(f, c) + "] ");
