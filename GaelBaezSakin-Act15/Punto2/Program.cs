@@ -68,7 +68,7 @@ namespace Punto2
             for (int i = 0; i < 3; i++)
             {
 
-                Console.Write("\nCuántos paquetes se enviaron hoy en " + naves[i].devolverNombre() + "?: ");
+                Console.Write("\nCuántos contenedores contiene " + naves[i].devolverNombre() + "?: ");
                 int cantidad = int.Parse(Console.ReadLine());
 
                 pesoContenedores[i] = new double[cantidad];
@@ -115,23 +115,35 @@ namespace Punto2
                 }
             }
 
-            Console.WriteLine("El contenedor mas pesado pesa: " + maxPeso + " t");
+            Console.WriteLine("\nEl contenedor mas pesado pesa: " + maxPeso + " t");
             Console.WriteLine("Pertenece a la nave: " + naveContenedor);
         }
         public void naveMasLigera()
         {
-            double suma = 0;
-          
-            /*string naveLigera*/;
+            double[] pesoTotal = new double[3];
+            
             for (int i = 0; i < 3; i++)
             {
+                pesoTotal[i] = 0;
                 for (int j = 0; j < pesoContenedores[i].Length; j++)
                 {
-                    suma += pesoContenedores[i];
+                    pesoTotal[i] += pesoContenedores[i][j];
                 }
-                Console.WriteLine($"\nLas pulsaciones promedio del paciente {naves[i].devolverNombre()}  son: " + suma);
-                suma = 0;
             }
+            
+            double minPeso = pesoTotal[0];
+            string naveMinima = naves[0].devolverNombre();
+            
+            for (int i = 1; i < 3; i++)
+            {
+                if (pesoTotal[i] < minPeso)
+                {
+                    minPeso = pesoTotal[i];
+                    naveMinima = naves[i].devolverNombre();
+                }
+            }
+            
+            Console.WriteLine($"\nLa nave mas ligera es {naveMinima} con: {minPeso} t");
         }
         static void Main(string[] args)
         {

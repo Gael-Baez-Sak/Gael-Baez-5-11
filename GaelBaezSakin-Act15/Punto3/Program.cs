@@ -109,24 +109,31 @@ namespace Punto3
         }
         public void areaMasAvistamientos()
         {
-            int maxPeso = reservas[0].devolverPosicion[0,0];
-            string sucursalMayor = reservas[0].devolverNombre();
+            int maxAvistamientos = reservas[0].devolverPosicion(0, 0);
+            int reservaMaxima = 0;
+            int filaMaxima = 0;
+            int columnaMaxima = 0;
 
             for (int i = 0; i < 3; i++)
             {
-                for (int j = 0; j < paquetes[i].Length; j++)
+                for (int f = 0; f < 3; f++)
                 {
-                    if (paquetes[i][j] > maxPeso)
+                    for (int c = 0; c < 3; c++)
                     {
-                        maxPeso = paquetes[i][j];
-                        sucursalMayor = sucursales[i];
+                        if (reservas[i].devolverPosicion(f, c) > maxAvistamientos)
+                        {
+                            maxAvistamientos = reservas[i].devolverPosicion(f, c);
+                            reservaMaxima = i;
+                            filaMaxima = f;
+                            columnaMaxima = c;
+                        }
                     }
                 }
             }
-
-            Console.WriteLine("El paquete mas pesado de la empresa pesa: " + maxPeso + " kg");
-            Console.WriteLine("Pertenece a la sucursal: " + sucursalMayor);
-        }
+            Console.WriteLine($"\nEl sector con mayor concentración de avistamientos fue:");
+            Console.WriteLine($"Reserva: {reservas[reservaMaxima].devolverNombre()}");
+            Console.WriteLine($"Coordenada: [{filaMaxima + 1}, {columnaMaxima + 1}]");
+            Console.WriteLine($"Cantidad de avistamientos: {maxAvistamientos}");
         }
         static void Main(string[] args)
         {
