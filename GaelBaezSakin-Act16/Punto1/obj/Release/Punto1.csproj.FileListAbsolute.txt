@@ -1,0 +1,2 @@
+C:\Users\gaelb\OneDrive\Desktop\POO\GaelBaezSakin-Act16\Punto1\obj\Release\Punto1.csproj.AssemblyReference.cache
+C:\Users\gaelb\OneDrive\Desktop\POO\GaelBaezSakin-Act16\Punto1\obj\Release\Punto1.csproj.CoreCompileInputs.cache

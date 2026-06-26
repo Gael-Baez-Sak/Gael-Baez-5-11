@@ -14,10 +14,70 @@ namespace Punto1
 //método para imprimir su sueldo.Definir un objeto de la clase Persona y
 //llamar a sus métodos y propiedades.También crear un objeto de la clase
 //Empleado y llamar a sus métodos y propiedades.
-    internal class Program
+    class Persona
     {
+        private string nombre;
+        private int edad;
+
+        public string Nombre
+        {
+            set
+            {
+                nombre = value;
+            }
+            get
+            {
+                return nombre;
+            }
+        }
+        public int Edad
+        {
+            set
+            {
+                edad = value;
+            }
+            get
+            {
+                return edad;
+            }
+        }
+        public void Imprimir()
+        {
+            Console.WriteLine("Nombre: " + nombre);
+            Console.WriteLine("Edad: " + edad);
+        }
+    }
+    class Empleado : Persona
+    {
+        private int sueldo;
+
+        public int Sueldo
+        {
+            set
+            {
+                sueldo = value;
+            }
+            get
+            {
+                return sueldo;
+            }
+        }
+        public void ImprimirSueldo()
+        {
+            Console.WriteLine("Sueldo: " + sueldo);
+        }
         static void Main(string[] args)
         {
+            Persona p = new Persona();
+            p.Nombre = "Dante Sparda";
+            p.Edad = 44;
+            p.Imprimir();
+
+            Empleado e = new Empleado();
+            e.Sueldo = 1000;
+            e.ImprimirSueldo();
+            Console.ReadKey();
+
         }
     }
 }
