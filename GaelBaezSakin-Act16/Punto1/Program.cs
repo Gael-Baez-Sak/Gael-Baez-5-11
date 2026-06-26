@@ -7,13 +7,13 @@ using System.Threading.Tasks;
 
 namespace Punto1
 {
-//Confeccionar una clase Persona que tenga como atributos el nombre y la
-//edad(definir las propiedades para poder acceder a dichos atributos). Definir
-//un método para imprimirlos.Plantear una segunda clase Empleado que
-//herede de la clase Persona.Añadir un atributo sueldo (y su propiedad) y el
-//método para imprimir su sueldo.Definir un objeto de la clase Persona y
-//llamar a sus métodos y propiedades.También crear un objeto de la clase
-//Empleado y llamar a sus métodos y propiedades.
+    //Confeccionar una clase Persona que tenga como atributos el nombre y la
+    //edad(definir las propiedades para poder acceder a dichos atributos). Definir
+    //un método para imprimirlos.Plantear una segunda clase Empleado que
+    //herede de la clase Persona.Añadir un atributo sueldo (y su propiedad) y el
+    //método para imprimir su sueldo.Definir un objeto de la clase Persona y
+    //llamar a sus métodos y propiedades.También crear un objeto de la clase
+    //Empleado y llamar a sus métodos y propiedades.
     class Persona
     {
         private string nombre;
@@ -76,8 +76,8 @@ namespace Punto1
             Empleado e = new Empleado();
             e.Sueldo = 1000;
             e.ImprimirSueldo();
-            Console.ReadKey();
 
+            Console.ReadKey();
         }
     }
 }
