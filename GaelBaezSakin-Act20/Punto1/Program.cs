@@ -60,7 +60,7 @@ namespace Punto1
             Destino = destino;
             NumeroVuelo = numeroVuelo;
             DuracionHoras = duracionHoras;  
-            // Mostrar ejecución del constructor de la clase base
+     
             Console.WriteLine($"(Constructor Vuelos) Vuelos creado: Vuelo {NumeroVuelo} a {Destino} ({DuracionHoras}h)");
         }
         public void Imprimir()
@@ -88,7 +88,7 @@ namespace Punto1
         }
         public VueloInternacional(string destino, int numeroVuelo, int duracionHoras, string paisDestino) : base(destino, numeroVuelo, duracionHoras)
         {
-            // Asignar la propiedad propia y mostrar ejecución del constructor derivado
+ 
             PaisDestino = paisDestino;
             Console.WriteLine($"(Constructor vueloInternacional) Vuelo Internacional creado: Vuelo {NumeroVuelo} hacia {PaisDestino}");
         }
