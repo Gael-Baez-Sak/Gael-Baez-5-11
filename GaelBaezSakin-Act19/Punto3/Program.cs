@@ -64,6 +64,8 @@ namespace Punto3
             Console.Write("\nIngrese el puntaje del jugador 4: ");
             int puntaje4 = int.Parse(Console.ReadLine());
             j4.SuperaRecord(puntaje4);
+
+            Console.ReadKey();
         }
     }
 }
