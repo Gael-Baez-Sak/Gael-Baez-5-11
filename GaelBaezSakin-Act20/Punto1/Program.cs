@@ -137,6 +137,8 @@ namespace Punto1
                 mayor.Imprimir();
                 Console.WriteLine("País de Destino: " + mayor.PaisDestino);
             }
+
+            Console.ReadKey();
         }
     }
 }
