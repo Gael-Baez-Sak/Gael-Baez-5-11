@@ -1,0 +1,7 @@
+C:\Users\gaelb\OneDrive\Desktop\POO\Gael-Baez-5-11\GaelBaezSakin-Act22\Punto5\bin\Debug\Punto5.exe.config
+C:\Users\gaelb\OneDrive\Desktop\POO\Gael-Baez-5-11\GaelBaezSakin-Act22\Punto5\bin\Debug\Punto5.exe
+C:\Users\gaelb\OneDrive\Desktop\POO\Gael-Baez-5-11\GaelBaezSakin-Act22\Punto5\bin\Debug\Punto5.pdb
+C:\Users\gaelb\OneDrive\Desktop\POO\Gael-Baez-5-11\GaelBaezSakin-Act22\Punto5\obj\Debug\Punto5.csproj.AssemblyReference.cache
+C:\Users\gaelb\OneDrive\Desktop\POO\Gael-Baez-5-11\GaelBaezSakin-Act22\Punto5\obj\Debug\Punto5.csproj.CoreCompileInputs.cache
+C:\Users\gaelb\OneDrive\Desktop\POO\Gael-Baez-5-11\GaelBaezSakin-Act22\Punto5\obj\Debug\Punto5.exe
+C:\Users\gaelb\OneDrive\Desktop\POO\Gael-Baez-5-11\GaelBaezSakin-Act22\Punto5\obj\Debug\Punto5.pdb

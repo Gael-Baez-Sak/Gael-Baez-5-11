@@ -16,44 +16,117 @@ namespace Punto1
     // Crear un vector de 3 clases de gimnasio y mostrar:
     //1. La clase que tenga la mayor duración.
     //2. El nombre y el horario de inicio de la clase más temprana.
-    class ClaseGimnasio
+    public class ClaseGimnasio
     {
         private string nombreClase;
         private DateTime horaInicio;
         private DateTime horaFin;
-
-        public ClaseGimnasio(string nombreClase, DateTime horaInicio, DateTime horaFin)
-        {
-            this.nombreClase = nombreClase;
-            this.horaInicio = horaInicio;
-            this.horaFin = horaFin;
-
-            Console.WriteLine("Ingrese el nombre de la clase: ");
-            nombreClase = Console.ReadLine();
-            Console.WriteLine("\nIngrese la hora de inicio : ");
-            horaInicio = DateTime.Parse(Console.ReadLine());
-            Console.WriteLine("\nIngrese la hora de fin : ");
-            horaFin = DateTime.Parse(Console.ReadLine());
+        public string NombreClase {
+            set
+            {
+                nombreClase = value;
+            }
+            get 
+            { 
+                return nombreClase; 
+            }
         }
-        
+        public DateTime HoraInicio {
+            set
+            {
+                horaInicio = value;
+            }
+            get
+            {
+                return horaInicio;
+            }
+        }
+        public DateTime HoraFin {
+            set
+            {
+                horaFin = value;
+            }
+            get
+            {
+                return horaFin;
+            }
+        }
+
         public ClaseGimnasio()
         {
-            this.nombreClase = "Clase por defecto";
-            this.horaInicio = DateTime.Now;
-            this.horaFin = DateTime.Now;
+            NombreClase = "Clase Genérica";
+            HoraInicio = DateTime.Today.AddHours(8); 
+            HoraFin = DateTime.Today.AddHours(9);
         }
 
-        public void CalcularDuracion()
+        public ClaseGimnasio(int numeroClase)
         {
-            TimeSpan duracion = horaFin - horaInicio;
-            Console.WriteLine($"\nLa duración de la clase {nombreClase} es: {duracion} minutos.");
+            Console.WriteLine($"\n--- Ingreso de datos para la Clase {numeroClase} ---");
+
+            Console.Write("Nombre de la clase (ej. Yoga, Pialtes): ");
+            NombreClase = Console.ReadLine();
+
+            Console.Write("Hora de inicio (Hora y minuto): ");
+            string LineaInicio = Console.ReadLine();
+            HoraInicio = ConvertirAHora(LineaInicio);
+
+            Console.Write("Hora de fin (Hora y minuto): ");
+            string LineaFin = Console.ReadLine();
+            HoraFin = ConvertirAHora(LineaFin);
+
         }
+        public TimeSpan CalcularDuracion()
+        {
+            return HoraFin - HoraInicio;
+        }
+
+        private DateTime ConvertirAHora(string input)
+        {
+            if (TimeSpan.TryParse(input, out TimeSpan tiempo))
+            {
+                return DateTime.Today.Add(tiempo);
+            }
+            else
+            {
+                Console.WriteLine("Formato incorrecto. Se asigno la hora actual por defecto.");
+                return DateTime.Now;
+            }
+        }
+
         static void Main(string[] args)
         {
             ClaseGimnasio[] clases = new ClaseGimnasio[3];
 
+            for (int i = 0; i < clases.Length; i++)
+            {
+                clases[i] = new ClaseGimnasio(i + 1);
+            }
 
+            ClaseGimnasio claseMayorDuracion = clases[0];
 
+            for (int i = 1; i < clases.Length; i++)
+            {
+                if (clases[i].CalcularDuracion() > claseMayorDuracion.CalcularDuracion())
+                {
+                    claseMayorDuracion = clases[i];
+                }
+            }
+
+            ClaseGimnasio claseMasTemprana = clases[0];
+
+            for (int i = 1; i < clases.Length; i++)
+            {
+                if (clases[i].HoraInicio < claseMasTemprana.HoraInicio)
+                {
+                    claseMasTemprana = clases[i];
+                }
+            }
+            Console.WriteLine("\n--- Resultados ---\n");
+
+            TimeSpan duracionMax = claseMayorDuracion.CalcularDuracion();
+            Console.WriteLine($"Clase con mayor duracion: {claseMayorDuracion.NombreClase} " +  $"(Duracion: {duracionMax.Hours}h {duracionMax.Minutes}m)");
+
+            Console.WriteLine($"Clase más temprana: {claseMasTemprana.NombreClase} " + $"(Hora de inicio: {claseMasTemprana.HoraInicio.ToString("HH:mm")} hs)");
 
             Console.ReadKey();
         }
