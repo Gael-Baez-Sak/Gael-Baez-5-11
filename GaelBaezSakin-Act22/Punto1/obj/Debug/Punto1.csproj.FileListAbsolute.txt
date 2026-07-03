@@ -5,3 +5,10 @@ C:\Users\gaelb\OneDrive\Desktop\POO\Gael-Baez-5-11\GaelBaezSakin-Act22\Punto1\ob
 C:\Users\gaelb\OneDrive\Desktop\POO\Gael-Baez-5-11\GaelBaezSakin-Act22\Punto1\obj\Debug\Punto1.csproj.CoreCompileInputs.cache
 C:\Users\gaelb\OneDrive\Desktop\POO\Gael-Baez-5-11\GaelBaezSakin-Act22\Punto1\obj\Debug\Punto1.exe
 C:\Users\gaelb\OneDrive\Desktop\POO\Gael-Baez-5-11\GaelBaezSakin-Act22\Punto1\obj\Debug\Punto1.pdb
+C:\Users\alumno.ET26\source\repos\ACTIVIDADES-P.O.O-5-11-\Gael-Baez-5-11\Gael-Baez-5-11\GaelBaezSakin-Act22\Punto1\bin\Debug\Punto1.exe.config
+C:\Users\alumno.ET26\source\repos\ACTIVIDADES-P.O.O-5-11-\Gael-Baez-5-11\Gael-Baez-5-11\GaelBaezSakin-Act22\Punto1\bin\Debug\Punto1.exe
+C:\Users\alumno.ET26\source\repos\ACTIVIDADES-P.O.O-5-11-\Gael-Baez-5-11\Gael-Baez-5-11\GaelBaezSakin-Act22\Punto1\bin\Debug\Punto1.pdb
+C:\Users\alumno.ET26\source\repos\ACTIVIDADES-P.O.O-5-11-\Gael-Baez-5-11\Gael-Baez-5-11\GaelBaezSakin-Act22\Punto1\obj\Debug\Punto1.csproj.AssemblyReference.cache
+C:\Users\alumno.ET26\source\repos\ACTIVIDADES-P.O.O-5-11-\Gael-Baez-5-11\Gael-Baez-5-11\GaelBaezSakin-Act22\Punto1\obj\Debug\Punto1.csproj.CoreCompileInputs.cache
+C:\Users\alumno.ET26\source\repos\ACTIVIDADES-P.O.O-5-11-\Gael-Baez-5-11\Gael-Baez-5-11\GaelBaezSakin-Act22\Punto1\obj\Debug\Punto1.exe
+C:\Users\alumno.ET26\source\repos\ACTIVIDADES-P.O.O-5-11-\Gael-Baez-5-11\Gael-Baez-5-11\GaelBaezSakin-Act22\Punto1\obj\Debug\Punto1.pdb

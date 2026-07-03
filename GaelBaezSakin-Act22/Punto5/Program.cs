@@ -34,42 +34,23 @@ namespace Punto5
 
         public string Nombre
         {
-            set
-            {
-                nombre = value;
-            }
-            get
-            {
-                return nombre;
-            }
+            set{ nombre = value; }
+            get{ return nombre; }
         }
         public int NroDorsal
         {
-            set
-            {
-                nroDorsal = value;
-            }
-            get
-            {
-                return nroDorsal;
-            }
+            set{ nroDorsal = value; }
+            get{ return nroDorsal; }
         }
         public int TiempoTotal
         {
-            set
-            {
-                tiempoTotal = value;
-            }
-            get
-            {
-                return tiempoTotal;
-            }
+            set{ tiempoTotal = value; }
+            get{ return tiempoTotal; }
         }
         public Corredor(string nombre, int nroDorsal)
         {
             this.nombre = nombre;
             this.nroDorsal = nroDorsal;
-            this.tiempoTotal = 0;
         }
 
 
@@ -92,47 +73,23 @@ namespace Punto5
 
         public string Codigo
         {
-            set
-            {
-                codigo = value;
-            }
-            get
-            {
-                return codigo;
-            }
+            set{ codigo = value; }
+            get{  return codigo; }
         }
         public DateTime HoraInicio
         {
-            set
-            {
-                horaInicio = value;
-            }
-            get
-            {
-                return horaInicio;
-            }
+            set{ horaInicio = value; }
+            get{ return horaInicio; }
         }
         public DateTime HoraFin
         {
-            set
-            {
-                horaFin = value;
-            }
-            get
-            {
-                return horaFin;
-            }
+            set{ horaFin = value; }
+            get{ return horaFin; }
         }
         public List<Corredor> ListaCorredores
         {
-            set
-            {
-                listaCorredores = value;
-            }
-            get
-            {
-                return listaCorredores;
-            }
+            set{ listaCorredores = value; }
+            get{ return listaCorredores; }
         }
 
         public Carrera()

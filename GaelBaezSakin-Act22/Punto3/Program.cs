@@ -19,24 +19,12 @@ namespace Punto3
         private string deportista;
         private int duracion;
         public string Deportista {
-            set
-            {
-                deportista = value;
-            }
-            get
-            {
-                return deportista;
-            }
+            set{ deportista = value; }
+            get{ return deportista; }
         }
         public int Duracion {
-            set
-            {
-                duracion = value;
-            }
-            get
-            {
-                return duracion;
-            }
+            set{ duracion = value; }
+            get{ return duracion; }
         }
 
         public Entrenamiento(string deportista)

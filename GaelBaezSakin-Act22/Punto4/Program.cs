@@ -23,37 +23,19 @@ namespace Punto4
 
         public string Codigo
         {
-            set
-            {
-                codigo = value;
-            }
-            get
-            {
-                return codigo;
-            }
+            set{ codigo = value;}
+            get{ return codigo; }
         }
 
         public DateTime HoraSalida
         {
-            set
-            {
-                horaSalida = value;
-            }
-            get
-            {
-                return horaSalida;
-            }
+            set{ horaSalida = value; }
+            get{ return horaSalida; }
         }
         public DateTime HoraLlegada
         {
-            set
-            {
-                horaLlegada = value;
-            }
-            get
-            {
-                return horaLlegada;
-            }
+            set{ horaLlegada = value; }
+            get{ return horaLlegada; }
         }
         public Vuelo(string codigo, DateTime horaSalida, DateTime horaLlegada)
         {

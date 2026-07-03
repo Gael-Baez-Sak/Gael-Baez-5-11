@@ -21,36 +21,18 @@ namespace Punto2
 
         public string Nombre
         {
-            set
-            {
-                nombre = value;
-            }
-            get 
-            {
-                return nombre; 
-            }
+            set{ nombre = value; }
+            get{ return nombre; }
         }
         public int PosX
         {
-            set
-            {
-                posX = value;
-            }
-            get
-            {
-                return posX;
-            }
+            set{ posX = value; }
+            get{ return posX; }
         }
         public int PosY
         {
-            set
-            {
-                posY = value;
-            }
-            get
-            {
-                return posY;
-            }
+            set{  posY = value; }
+            get{ return posY; }
         }
 
         public ElementoPantalla(string nombre, int posX, int posY)
@@ -70,15 +52,16 @@ namespace Punto2
         static void Main(string[] args)
         {
             ElementoPantalla[] e = new ElementoPantalla[4];
-            e[0] = new ElementoPantalla("Elemento 1", 10, 5);
-            e[1] = new ElementoPantalla("Elemento 2", 20, 10);
-            e[2] = new ElementoPantalla("Elemento 3", 30, 15);
-            e[3] = new ElementoPantalla("Elemento 4", 40, 20);
+            e[0] = new ElementoPantalla("Elemento 1", 40, 20);
+            e[1] = new ElementoPantalla("Elemento 2", 30, 15);
+            e[2] = new ElementoPantalla("Elemento 3", 20, 10);
+            e[3] = new ElementoPantalla("Elemento 4", 10, 5);
 
-            e[0].Mostrar();
-            e[1].Mostrar();
-            e[2].Mostrar();
-            e[3].Mostrar();
+
+            for (int i = 0; i < 4; i++)
+            {
+                e[i].Mostrar();
+            }
 
             Console.ReadKey();
         }

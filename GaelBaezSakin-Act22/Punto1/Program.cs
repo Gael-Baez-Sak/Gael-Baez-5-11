@@ -22,34 +22,16 @@ namespace Punto1
         private DateTime horaInicio;
         private DateTime horaFin;
         public string NombreClase {
-            set
-            {
-                nombreClase = value;
-            }
-            get 
-            { 
-                return nombreClase; 
-            }
+            set{ nombreClase = value; }
+            get{ return nombreClase; }
         }
         public DateTime HoraInicio {
-            set
-            {
-                horaInicio = value;
-            }
-            get
-            {
-                return horaInicio;
-            }
+            set{ horaInicio = value; }
+            get{ return horaInicio; }
         }
         public DateTime HoraFin {
-            set
-            {
-                horaFin = value;
-            }
-            get
-            {
-                return horaFin;
-            }
+            set{ horaFin = value; }
+            get{ return horaFin; }
         }
 
         public ClaseGimnasio()
@@ -66,11 +48,11 @@ namespace Punto1
             Console.Write("Nombre de la clase (ej. Yoga, Pialtes): ");
             NombreClase = Console.ReadLine();
 
-            Console.Write("Hora de inicio (Hora y minuto): ");
+            Console.Write("Hora de inicio (Hora:Minuto): ");
             string LineaInicio = Console.ReadLine();
             HoraInicio = ConvertirAHora(LineaInicio);
 
-            Console.Write("Hora de fin (Hora y minuto): ");
+            Console.Write("Hora de fin (Hora:Minuto): ");
             string LineaFin = Console.ReadLine();
             HoraFin = ConvertirAHora(LineaFin);
 
@@ -88,7 +70,7 @@ namespace Punto1
             }
             else
             {
-                Console.WriteLine("Formato incorrecto. Se asigno la hora actual por defecto.");
+                Console.WriteLine("Lo escribiste mal, se asigno la hora actual por defecto.");
                 return DateTime.Now;
             }
         }
@@ -121,7 +103,7 @@ namespace Punto1
                     claseMasTemprana = clases[i];
                 }
             }
-            Console.WriteLine("\n--- Resultados ---\n");
+            Console.WriteLine("\n--- Resultados ---");
 
             TimeSpan duracionMax = claseMayorDuracion.CalcularDuracion();
             Console.WriteLine($"Clase con mayor duracion: {claseMayorDuracion.NombreClase} " +  $"(Duracion: {duracionMax.Hours}h {duracionMax.Minutes}m)");
