@@ -30,8 +30,41 @@ namespace Punto6
     //4. RemoverLibro(): Pedir al usuario el título de un libro y, utilizando
     //los métodos de búsqueda y remoción de listas, eliminarlo de la
     //colección si se encuentra presente.
-    internal class Program
+    class Libro
     {
+        private string titulo;
+        private int anioPublicacion;
+        public string Titulo
+        {
+            set
+            {
+                titulo = value;
+            }
+            get
+            {
+                return titulo;
+            }
+        }
+        public int AnioPublicacion
+        {
+            set
+            {
+                anioPublicacion = value;
+            }
+            get
+            {
+                return anioPublicacion;
+            }
+        }
+        public Libro(string tit, int anio)
+        {
+            titulo = tit;
+            anioPublicacion = anio;
+        }
+    }
+    class Biblioteca
+    {
+
         static void Main(string[] args)
         {
         }

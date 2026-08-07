@@ -31,8 +31,54 @@ namespace Punto5
     //actualmente en reparación, la cantidad total de unidades alojadas en
     //el taller mediante la propiedad .Count y la suma total acumulada por
     //cobrar.
-    internal class Program
+    class Vehiculo
     {
+        private string patente;
+        private double costoReparacion;
+
+        public string Patente
+        {
+            set
+            {
+                patente = value;
+            }
+            get
+            {
+                return patente;
+            }
+        }
+        public double CostoReparacion
+        {
+            set
+            {
+                costoReparacion = value;
+            }
+            get
+            {
+                return costoReparacion;
+            }
+        }
+        
+        public Vehiculo(string pat, double costo)
+        {
+            patente = pat;
+            costoReparacion = costo;
+        }
+    class GestionTaller
+    {
+
+        public void IngresarVehiculo()
+        {
+        }
+        public void BuscarVehiculo()
+        {
+        }
+        public void EntregarVehiculo()
+        {
+        }
+        public void CalcularRecaudacionPendiente()
+        {
+        }
         static void Main(string[] args)
         {
         }

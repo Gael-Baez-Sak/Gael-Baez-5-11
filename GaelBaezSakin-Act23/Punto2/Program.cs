@@ -15,7 +15,7 @@ namespace Punto2
     //nivelBateria(int, de 0 a 100). Definir sus propiedades correspondientes.
     //Su constructor debe recibir cod y bat.
     // Crear la clase CentroControl que administre una lista de objetos
-    //List&lt; Dron&gt;.
+    //List<Dron>;.
     // Métodos en CentroControl:
 
     //1. Un constructor que cargue por teclado una lista inicial de 4 drones
@@ -28,10 +28,84 @@ namespace Punto2
     //4. MostrarDronesRestantes() : Imprimir la flota actualizada y la
     //cantidad de drones operativos utilizando la propiedad.Count.
 
-    internal class Program
+    class Dron
     {
+        private string codigo;
+        private int nivelBateria;
+        public string Codigo
+        {
+            set 
+            {
+                codigo = value;
+            }
+            get
+            { 
+                return codigo;
+            }
+        }
+        public int NivelBateria
+        {
+            set
+            {              
+                nivelBateria = value;                
+            }
+            get 
+            {
+                return nivelBateria;
+            }
+        }
+        public Dron(string cod, int bat)
+        {
+            codigo = cod;
+            nivelBateria = bat;
+        }
+    }
+    class CentroControl
+    {
+        private List<Dron> listaDrones;
+        public CentroControl()
+        {
+            listaDrones = new List<Dron>();
+            for (int i = 0; i < 4; i++)
+            {
+                Console.WriteLine($"\nIngrese los  datos del dron {i + 1}:");
+                Console.Write("Código: ");
+                string codigo = Console.ReadLine();
+                Console.Write("Nivel de batería (0-100): ");
+                int nivelBateria = int.Parse(Console.ReadLine());
+                listaDrones.Add(new Dron(codigo, nivelBateria));
+            }
+        }
+        public void ListarFlota()
+        {
+            Console.WriteLine("\nLista de drones:");
+            foreach (var dron in listaDrones)
+            {
+                Console.WriteLine($"Código: {dron.Codigo}, Nivel de batería: {dron.NivelBateria}%");
+            }
+        }
+        public void RemoverDronesBajos()
+        {
+            listaDrones.RemoveAll(d => d.NivelBateria <= 15);
+        }
+        public void MostrarDronesRestantes()
+        {
+            Console.WriteLine("\nDrones restantes:");
+            foreach (var dron in listaDrones)
+            {
+                Console.WriteLine($"Código: {dron.Codigo}, Nivel de batería: {dron.NivelBateria}%");
+            }
+            Console.WriteLine($"Cantidad de drones operativos: {listaDrones.Count}");
+        }
         static void Main(string[] args)
         {
+            CentroControl cc = new CentroControl();
+
+            cc.ListarFlota();
+            cc.RemoverDronesBajos();
+            cc.MostrarDronesRestantes();
+
+            Console.ReadKey();
         }
     }
 }
