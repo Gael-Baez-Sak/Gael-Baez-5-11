@@ -81,9 +81,9 @@ namespace Punto4
                 DispositivoInteligente dispositivo = new DispositivoInteligente(nombreDispositivo, consumoWatts);
                 listaDispositivos.Add(dispositivo);
 
-                Console.Write("\nqueres agregar otro dispositivo? (Si/No): ");
+                Console.Write("\nqueres agregar otro dispositivo? (SI/NO): ");
                 string respuesta = Console.ReadLine();
-                if (respuesta != "Si")
+                if (respuesta.ToUpper() != "SI")
                 {
                     break;
                 }
@@ -102,23 +102,33 @@ namespace Punto4
         {
             //3. CalcularConsumoTotal(): Calcular y mostrar en pantalla los
             //Watts totales que consume la casa sumando los valores de la lista.
+
+            double total = listaDispositivos.Sum(d => d.consumowatts);
+            Console.WriteLine($"\nConsumo total: {total}W");
         }
         public void DesconectarDispositivo()
         {
             //4. DesconectarDispositivo(): Solicitar al usuario el nombre de
             //un dispositivo y, si existe en la lista, removerlo de forma dinámica
             //para simular su apagado remoto.
+
             while (true)
             {
-                Console.Write("\nIngrese el dispositivo que desea desconectar: ");
+                Console.Write("\nIngrese el dispositivo que desea desconectar (o 'FIN' para terminar): ");
                 string desconectar = Console.ReadLine();
 
-                string encontrada = listaDispositivos.RemoveAll(d => d == desconectar);
-
-                Console.WriteLine($"Especie encontrada: {encontrada}");
-                if (desconectar == "FIN")
+                if (desconectar.ToUpper() == "FIN")
                 {
                     break;
+                }
+                int removidos = listaDispositivos.RemoveAll(d => d.nombredispositivo == desconectar);
+                if (removidos > 0)
+                {
+                    Console.WriteLine($"Dispositivo '{desconectar}' desconectado. ({removidos} eliminado/s)");
+                }
+                else
+                {
+                    Console.WriteLine($"No se encontró el dispositivo '{desconectar}'.");
                 }
             }
         }
@@ -127,8 +137,8 @@ namespace Punto4
         {
             PanelDomotico pd = new PanelDomotico();
 
-            pd.CalcularConsumoTotal();
             pd.MostrarDispositivos();
+            pd.CalcularConsumoTotal();
             pd.DesconectarDispositivo();
 
             Console.ReadKey();

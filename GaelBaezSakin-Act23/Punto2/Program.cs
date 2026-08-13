@@ -17,7 +17,6 @@ namespace Punto2
     // Crear la clase CentroControl que administre una lista de objetos
     //List<Dron>;.
     // Métodos en CentroControl:
-
     //1. Un constructor que cargue por teclado una lista inicial de 4 drones
     //ingresando sus códigos y baterías.
     //2. ListarFlota(): Mostrar la lista de drones en pantalla.

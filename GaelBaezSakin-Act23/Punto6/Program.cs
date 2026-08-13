@@ -33,7 +33,7 @@ namespace Punto6
     class Libro
     {
         private string titulo;
-        private int anioPublicacion;
+        private int añoPublicacion;
         public string Titulo
         {
             set
@@ -45,21 +45,21 @@ namespace Punto6
                 return titulo;
             }
         }
-        public int AnioPublicacion
+        public int AñoPublicacion
         {
             set
             {
-                anioPublicacion = value;
+                añoPublicacion = value;
             }
             get
             {
-                return anioPublicacion;
+                return añoPublicacion;
             }
         }
-        public Libro(string tit, int anio)
+        public Libro(string tit, int año)
         {
             titulo = tit;
-            anioPublicacion = anio;
+            añoPublicacion = año;
         }
     }
     class Biblioteca
