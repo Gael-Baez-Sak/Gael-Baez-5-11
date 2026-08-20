@@ -74,20 +74,30 @@ namespace Punto5
             }
             public void IngresarVehiculo()
             {
-                //o IngresarVehiculo(): Solicitar por teclado la patente y el costo de
+                //IngresarVehiculo(): Solicitar por teclado la patente y el costo de
                 //reparación de un vehículo para agregarlo a la lista mediante.Add().
 
-                Console.Write("\nIngrese la patente del vehiculo: ");
-                string patente = Console.ReadLine();
-                Console.Write("Ingrese el costo de la reparacion realizada: ");
-                double costo = int.Parse(Console.ReadLine());
-                Vehiculo veh = new Vehiculo(patente, costo);
-                listaVehiculos.Add(veh);
-                Console.WriteLine("\nVehiculo ingresado exitosamente.\n");
+                while (true)
+                {
+                    Console.Write("\nIngrese la patente del vehiculo: ");
+                    string patente = Console.ReadLine();
+                    Console.Write("Ingrese el costo de la reparacion realizada: ");
+                    double costo = double.Parse(Console.ReadLine());
+                    Vehiculo veh = new Vehiculo(patente, costo);
+                    listaVehiculos.Add(veh);
+                    Console.WriteLine("\nVehiculo ingresado exitosamente\n");
+
+                    Console.Write("Desea agregar otro vehiculo? (Si/No): ");
+                    string respuesta = Console.ReadLine();
+                    if (respuesta != "Si")
+                    {
+                        break;
+                    }
+                }
             }
             public void BuscarVehiculo()
             {
-                //o BuscarVehiculo(): Pedir al operador que ingrese una patente y,
+                //BuscarVehiculo(): Pedir al operador que ingrese una patente y,
                 //recorriendo la lista, informar si el vehículo está en el taller y mostrar
                 //su costo asociado.
 
@@ -104,26 +114,59 @@ namespace Punto5
                     Vehiculo encontrada = listaVehiculos.Find(e => e.Patente == buscar);
                     if (encontrada != null)
                     {
-                        Console.WriteLine($"Vehículo encontrado - Patente: {encontrada.Patente}, Costo: {encontrada.CostoReparacion}");
+                        Console.WriteLine($"Vehiculo encontrado - Patente: {encontrada.Patente}, Costo: {encontrada.CostoReparacion}");
                     }
                     else
                     {
-                        Console.WriteLine($"No se encontró un vehículo con la patente '{buscar}'.");
+                        Console.WriteLine($"No se encontro un vehiculo con la patente '{buscar}'.");
                     }
                 }
             }
             public void EntregarVehiculo()
             {
-                //o EntregarVehiculo(): Solicitar una patente por teclado, buscar el
+                //EntregarVehiculo(): Solicitar una patente por teclado, buscar el
                 //vehículo en la lista y, si existe, removerlo de la colección mediante
                 //.Remove() confirmando la entrega del automóvil.
+
+                while (true)
+                {
+                    Console.Write("\nIngrese la patente del vehiculo a entregar (o 'FIN' para terminar): ");
+                    string patente = Console.ReadLine();
+
+                    if (patente == "FIN")
+                    {
+                        break;
+                    }
+
+                    Vehiculo v = listaVehiculos.Find(x => x.Patente == patente);
+                    if (v != null)
+                    {
+                        listaVehiculos.Remove(v);
+                        Console.WriteLine($"Vehiculo con patente '{patente}' entregado. Costo asociado: {v.CostoReparacion}");
+                    }
+                    else
+                    {
+                        Console.WriteLine($"No se encontró un vehiculo con la patente '{patente}'.");
+                    }
+                }
             }
             public void CalcularRecaudacionPendiente()
             {
-                //o CalcularRecaudacionPendiente(): Listar los vehículos
+                //CalcularRecaudacionPendiente(): Listar los vehículos
                 //actualmente en reparación, la cantidad total de unidades alojadas en
                 //el taller mediante la propiedad .Count y la suma total acumulada por
                 //cobrar.
+
+                Console.WriteLine("\nVehiculos actualmente en reparacion: ");
+                double total = 0;
+                foreach (var veh in listaVehiculos)
+                {
+                    Console.WriteLine($"Patente: {veh.Patente}, Costo: {veh.CostoReparacion}");
+                    total += veh.CostoReparacion;
+                }
+
+                Console.WriteLine($"\nCantidad total de vehiculos en taller: {listaVehiculos.Count}");
+                Console.WriteLine($"Suma total pendiente por cobrar: {total}");
             }
             static void Main(string[] args)
             {

@@ -36,25 +36,11 @@ namespace Punto6
         private int añoPublicacion;
         public string Titulo
         {
-            set
-            {
-                titulo = value;
-            }
-            get
-            {
-                return titulo;
-            }
+            get { return titulo; }
         }
         public int AñoPublicacion
         {
-            set
-            {
-                añoPublicacion = value;
-            }
-            get
-            {
-                return añoPublicacion;
-            }
+            get { return añoPublicacion; }
         }
         public Libro(string tit, int año)
         {
@@ -64,9 +50,86 @@ namespace Punto6
     }
     class Biblioteca
     {
+        private List<Libro> catalogo = new List<Libro>();
+
+        public void CargarCatalogo()
+        {
+            //1. CargarCatalogo(): Solicitar por teclado títulos y años de
+            //publicación para agregar libros a la lista mediante.Add(). La carga
+            //finaliza cuando el usuario ingresa la palabra &quot; FIN&quot; como título.
+            while (true)
+            {
+                Console.Write("Ingrese el titulo del libro (o 'FIN' para terminar): ");
+                string titulo = Console.ReadLine();
+                if (titulo == "FIN")
+                {
+                    break;
+                }
+
+                Console.Write("Ingrese el año de publicacion: ");
+                int año = int.Parse(Console.ReadLine());
+                catalogo.Add(new Libro(titulo, año));
+            }
+        }
+
+        public void ListarCatalogo()
+        {
+            //2. ListarCatalogo(): Mostrar en pantalla todos los libros del catálogo
+            //junto a la cantidad total de obras registradas mediante la propiedad
+            //.Count.
+            Console.WriteLine("\nCatalogo de libros:");
+            foreach (var libro in catalogo)
+            {
+                Console.WriteLine($"Titulo: {libro.Titulo}, Año: {libro.AñoPublicacion}");
+            }
+            Console.WriteLine($"Cantidad total de obras registradas: {catalogo.Count}");
+        }
+
+        public void FiltrarPorAño()
+        {
+            //3. FiltrarPorAño(): Solicitar al usuario un año determinado e
+            //imprimir en consola únicamente aquellos libros cuyo año de
+            //publicación sea menor a dicho valor.
+            Console.Write("\nIngrese un año para buscar los libros publicados antes de ese año: ");
+            int año = int.Parse(Console.ReadLine());
+            Console.WriteLine($"\nLibros publicados antes de {año}:");
+            foreach (var libro in catalogo)
+            {
+                if (libro.AñoPublicacion < año)
+                {
+                    Console.WriteLine($"Titulo: {libro.Titulo}, Año: {libro.AñoPublicacion}");
+                }
+            }
+        }
+
+        public void RemoverLibro()
+        {
+            //4. RemoverLibro(): Pedir al usuario el título de un libro y, utilizando
+            //los métodos de búsqueda y remoción de listas, eliminarlo de la
+            //colección si se encuentra presente.   
+            Console.Write("\nIngrese el título del libro a remover: ");
+            string titulo = Console.ReadLine();
+            int removed = catalogo.RemoveAll(l => l.Titulo == titulo);
+            if (removed > 0)
+            {
+                Console.WriteLine($"Se removieron {removed} ejemplar/es con el título '{titulo}'");
+            }
+            else
+            {
+                Console.WriteLine($"No se encontro ningun libro con el titulo '{titulo}'");
+            }
+        }
 
         static void Main(string[] args)
         {
+            Biblioteca b = new Biblioteca();
+
+            b.CargarCatalogo();
+            b.ListarCatalogo();
+            b.FiltrarPorAño();
+            b.RemoverLibro();
+
+            Console.ReadKey();
         }
     }
 }
