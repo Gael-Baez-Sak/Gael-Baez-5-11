@@ -9,9 +9,6 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Punto9
-{
-    internal class Program
-    {
         //9-
         //Un instituto de enseñanza registra de forma dinámica a sus estudiantes para
         //realizar el seguimiento académico de sus materias.
@@ -33,8 +30,109 @@ namespace Punto9
         //o DarDeBaja(): Pedir al operador el nombre de un estudiante y,
         //utilizando los métodos de búsqueda y remoción de listas, eliminarlo
         //de la colección si se encuentra presente.
+{
+    class Estudiante
+    {
+        private string nombreCompleto;
+        private double calificacion;
+        public string NombreCompleto
+        {
+            set
+            {
+                nombreCompleto = value;
+            }
+            get 
+            {
+                return nombreCompleto;
+            }
+        }
+        public double Calificacion
+        {
+            set
+            {
+                calificacion = value;
+            }
+            get 
+            { 
+                return calificacion;
+            }
+        }
+        public Estudiante(string nom, double cal)
+        {
+            nombreCompleto = nom;
+            calificacion = cal;
+        }
+    }
+
+    class GestionAcademica
+    {
+        private List<Estudiante> estudiantes;
+        public GestionAcademica()
+        {
+            estudiantes = new List<Estudiante>();
+        }
+        public void CargarEstudiantes()
+        {
+            while (true)
+            {
+                Console.Write("Ingrese el nombre del estudiante (o 'FIN' para terminar): ");
+                string nombre = Console.ReadLine();
+                if (nombre.ToUpper() == "FIN")
+                    break;
+                Console.Write("Ingrese la calificacion del estudiante: ");
+                double calificacion;
+                while (!double.TryParse(Console.ReadLine(), out calificacion))
+                {
+                    Console.Write("Entrada invalida. Ingrese un numero para la calificacion: ");
+                }
+                estudiantes.Add(new Estudiante(nombre, calificacion));
+            }
+        }
+        public void ListarEstudiantes()
+        {
+            Console.WriteLine("\nLista de Estudiantes:");
+            foreach (var estudiante in estudiantes)
+            {
+                Console.WriteLine($"Nombre: {estudiante.NombreCompleto}, Calificacion: {estudiante.Calificacion}");
+            }
+            Console.WriteLine($"Total de inscriptos: {estudiantes.Count}");
+        }
+        public void FiltrarAprobados()
+        {
+            Console.WriteLine("\nEstudiantes Aprobados (Calificación >= 6.0):");
+            foreach (var estudiante in estudiantes)
+            {
+                if (estudiante.Calificacion >= 6.0)
+                {
+                    Console.WriteLine($"Nombre: {estudiante.NombreCompleto}, Calificacion: {estudiante.Calificacion}");
+                }
+            }
+        }
+        public void DarDeBaja()
+        {
+            Console.Write("Ingrese el nombre del estudiante a dar de baja: ");
+            string nombre = Console.ReadLine();
+            var estudiante = estudiantes.FirstOrDefault(e => e.NombreCompleto.Equals(nombre, StringComparison.OrdinalIgnoreCase));
+            if (estudiante != null)
+            {
+                estudiantes.Remove(estudiante);
+                Console.WriteLine($"Estudiante {nombre} dado de baja.");
+            }
+            else
+            {
+                Console.WriteLine($"No se encontro al estudiante con nombre {nombre}.");
+            }
+        }
         static void Main(string[] args)
         {
+            GestionAcademica ga = new GestionAcademica();
+
+            ga.CargarEstudiantes();
+            ga.ListarEstudiantes();
+            ga.FiltrarAprobados();
+            ga.DarDeBaja();
+
+            Console.ReadKey();
         }
     }
 }

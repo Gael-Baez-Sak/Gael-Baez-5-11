@@ -1,0 +1,7 @@
+C:\Users\alumno.ET26\source\repos\ACTIVIDADES-P.O.O-5-11-\Gael-Baez-5-11\Gael-Baez-5-11\GaelBaezSakin-Act24\Punto9\bin\Debug\Punto9.exe.config
+C:\Users\alumno.ET26\source\repos\ACTIVIDADES-P.O.O-5-11-\Gael-Baez-5-11\Gael-Baez-5-11\GaelBaezSakin-Act24\Punto9\bin\Debug\Punto9.exe
+C:\Users\alumno.ET26\source\repos\ACTIVIDADES-P.O.O-5-11-\Gael-Baez-5-11\Gael-Baez-5-11\GaelBaezSakin-Act24\Punto9\bin\Debug\Punto9.pdb
+C:\Users\alumno.ET26\source\repos\ACTIVIDADES-P.O.O-5-11-\Gael-Baez-5-11\Gael-Baez-5-11\GaelBaezSakin-Act24\Punto9\obj\Debug\Punto9.csproj.AssemblyReference.cache
+C:\Users\alumno.ET26\source\repos\ACTIVIDADES-P.O.O-5-11-\Gael-Baez-5-11\Gael-Baez-5-11\GaelBaezSakin-Act24\Punto9\obj\Debug\Punto9.csproj.CoreCompileInputs.cache
+C:\Users\alumno.ET26\source\repos\ACTIVIDADES-P.O.O-5-11-\Gael-Baez-5-11\Gael-Baez-5-11\GaelBaezSakin-Act24\Punto9\obj\Debug\Punto9.exe
+C:\Users\alumno.ET26\source\repos\ACTIVIDADES-P.O.O-5-11-\Gael-Baez-5-11\Gael-Baez-5-11\GaelBaezSakin-Act24\Punto9\obj\Debug\Punto9.pdb
